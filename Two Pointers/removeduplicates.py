@@ -19,7 +19,6 @@ Explanation: The first two elements after removing the duplicates will be [2, 11
 def remove_duplicates(arr):
     non_dup, i = 1, 0
     while i < len(arr):
-        print((non_dup), i)
         if arr[non_dup - 1] != arr[i]:
             arr[non_dup] = arr[i]
             non_dup += 1
