@@ -1,7 +1,8 @@
 """
 Problem Statement
 
-Given an array of unsorted numbers and a target number, find all unique quadruplets in it, whose sum is equal to the target number.
+Given an array of unsorted numbers and a target number, find all unique
+quadruplets in it, whose sum is equal to the target number.
 
 Example 1:
 
@@ -37,7 +38,8 @@ def search_pairs(arr, target_sum, first, second, quadruplets):
     while left < right:
         quad_sum = arr[first] + arr[second] + arr[left] + arr[right]
         if quad_sum == target_sum:  # found the quadruplet
-            quadruplets.append([arr[first], arr[second], arr[left], arr[right]])
+            quadruplets.append(
+                [arr[first], arr[second], arr[left], arr[right]])
             left += 1
             right -= 1
             while left < right and arr[left] == arr[left - 1]:
