@@ -1,7 +1,9 @@
 """
-Given a string and a pattern, find out if the string contains any permutation of the pattern.
+Given a string and a pattern, find out if the string contains any permutation
+of the pattern.
 
-Permutation is defined as the re-arranging of the characters of the string. For example, “abc” has the following six permutations:
+Permutation is defined as the re-arranging of the characters of the string. For
+example, “abc” has the following six permutations:
 
 abc
 acb
@@ -15,12 +17,14 @@ Example 1:
 
 Input: String="oidbcaf", Pattern="abc"
 Output: true
-Explanation: The string contains "bca" which is a permutation of the given pattern.
+Explanation: The string contains "bca" which is a permutation of the given
+pattern.
 Example 2:
 
 Input: String="odicf", Pattern="dc"
 Output: false
-Explanation: No permutation of the pattern is present in the given string as a substring.
+Explanation: No permutation of the pattern is present in the given string as a
+substring.
 Example 3:
 
 Input: String="bcdxabcdy", Pattern="bcdyabcdx"
@@ -30,11 +34,12 @@ Example 4:
 
 Input: String="aaacb", Pattern="abc"
 Output: true
-Explanation: The string contains "acb" which is a permutation of the given pattern.
+Explanation: The string contains "acb" which is a permutation of the given
+pattern.
 """
 
 
-def permutInString(string, pattern):
+def find_permutation(string, pattern):
     start, matched = 0, 0
     m = {}
 
@@ -66,10 +71,11 @@ def permutInString(string, pattern):
 
 
 def main():
-    print('Permutation exist: ' + str(permutInString("oidbcaf", "abc")))
-    print('Permutation exist: ' + str(permutInString("odicf", "dc")))
-    print('Permutation exist: ' + str(permutInString("bcdxabcdy", "bcdyabcdx")))
-    print('Permutation exist: ' + str(permutInString("aaacb", "abc")))
+    print('Permutation exist: ' + str(find_permutation("oidbcaf", "abc")))
+    print('Permutation exist: ' + str(find_permutation("odicf", "dc")))
+    print('Permutation exist: ' + str(find_permutation("bcdxabcdy",
+                                                       "bcdyabcdx")))
+    print('Permutation exist: ' + str(find_permutation("aaacb", "abc")))
 
 
 main()
