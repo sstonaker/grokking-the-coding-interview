@@ -1,47 +1,58 @@
 Hi,
 Thank you for creating the course, I think it is well put together and contains the critical patterns to learn for coding interviews.
 I would like to point out the following errata so that it can be updated in the next version:
---------------------
+
+---
+
 In the Python solutions, there is a mixture of camelCase and snake_case. While I believe it may be allowed in the official documentation, Python convention is generally for snake_case with variables names.
 Ex. Solution to Triplet Sum to Zero (medium) is an excellent example of typical Python Convention while Squaring a Sorted Array (easy) mixes the conventions between function and variable names.
-The following modules have non-typical conventions which I would be happy to submit solutions for if interested:2. Pattern: Two PointersSquaring a Sorted Array (easy)4. Pattern Islands (or Matrix Traversal) (*NEW*)
-All exercises6. Merge IntervalsMerge Intervals (medium)Problem Challenge 1Problem Challenge 3
+The following modules have non-typical conventions which I would be happy to submit solutions for if interested:2. Pattern: Two PointersSquaring a Sorted Array (easy)4. Pattern Islands (or Matrix Traversal) (_NEW_)
+All exercises6. Pattern: Merge IntervalsMerge Intervals (medium)Problem Challenge 1Problem Challenge 37. Pattern: Cyclic SortFind all Missing Numbers (easy)Find the Duplicate Number (easy) (solution2)Find all Duplicate Numbers (easy)Problem Challenge 3
 
+Additionally, most of the above Python solutions do not have correct indentation. There are only 2 spaces when there should be 4 spaces for an indent. If you paste the solutions into an editor without an auto-formatter, you will need to fix all the indentation in order to run the solution.-------------------- 3. Pattern: Fast & Slow PointersStart of LinkedList Cycle (medium) - In this solution, the `from __future__ import print_function` line is not needed and may be confusing to some students. I assume this is an artifact of testing and most will not be running this code as its own module.
 
-Additionally, most of the above Python solutions do not have correct indentation. There are only 2 spaces when there should be 4 spaces for an indent. If you paste the solutions into an editor without an auto-formatter, you will need to fix all the indentation in order to run the solution.--------------------
-3. Pattern: Fast & Slow PointersStart of LinkedList Cycle (medium) - In this solution, the `from __future__ import print_function` line is not needed and may be confusing to some students. I assume this is an artifact of testing and most will not be running this code as its own module.
------
-Problem Challenge 2 - The font of the hyperlink to Middle of the LinkedList is different from the rest of the site. 
+---
 
---------------------
-4. Pattern Islands (or Matrix Traversal) (*NEW*)Number of Islands (easy) - In the section for BFS there is a missing closing parenthesis for the big O notation.
- 
+Problem Challenge 2 - The font of the hyperlink to Middle of the LinkedList is different from the rest of the site.
 
------
-Number of Islands (easy) - In the section for BFS with visited matrix, there is a type that states incorrectly that it is a DFS algorithm. 
+---
 
------
+4. Pattern Islands (or Matrix Traversal) (_NEW_)Number of Islands (easy) - In the section for BFS there is a missing closing parenthesis for the big O notation.
+
+---
+
+Number of Islands (easy) - In the section for BFS with visited matrix, there is a type that states incorrectly that it is a DFS algorithm.
+
+---
+
 Problem Challenge 2 - In the Python solution on line 11, there is a semicolon ending the statement. Semicolons don't break the Python interpreter, they are only allowed if using more than one statement per line.                traversal = traverseIslandDFS(matrix, visited, i, j, "O"); # origin
 
---------------------------
+---
+
 5. Pattern: Sliding WindowSmallest Subarray with a Greater Sum (easy) - In the Python solution on line 9, the start value of 0 can be omitted from the range() function since it is the default and consistent with other solutions.    for window_end in range(0, len(arr)):
 
------
-Fruits into Baskets (medium) - This lesson is missing the green dividers present in other lessons.
------
-Longest Substring with Distinct Characters (hard) - In th problem statement, there is a whitespace in front of the "Example 1:" heading. Note: this is a minor formatting detail.
------
-Problem Challenge 4 - In the Python solution on line 18, the start value of 0 can be omitted from the range() function since it is the default and consistent with other solutions.
--------------------------
+---
+
+## Fruits into Baskets (medium) - This lesson is missing the green dividers present in other lessons.
+
+## Longest Substring with Distinct Characters (hard) - In th problem statement, there is a whitespace in front of the "Example 1:" heading. Note: this is a minor formatting detail.
+
+## Problem Challenge 4 - In the Python solution on line 18, the start value of 0 can be omitted from the range() function since it is the default and consistent with other solutions.
+
 6. Pattern: Merge IntervalsMerge Intervals (medium) - In this solution, the `from __future__ import print_function` line is not needed and may be confusing to some students. I assume this is an artifact of testing and most will not be running this code as its own module.
------
-Intervals Intersection (medium) - In the Python solution on line 16, there is a typo where the word `the` is repeated twice in the comment: # store the the intersection part
------
-Problem Challenge 1 - importing with a wildcard (*) from a library will cause a linting error since this could cause naming issues. I'd suggest importing the functions that are being used directly as from heapq import heappop, heappush
------
-Problem Challenge 2 - By convention, class names (job) should start with a capital letter.Same comment as above in regards to the wildcard import statement.
------
+
+---
+
+## Intervals Intersection (medium) - In the Python solution on line 16, there is a typo where the word `the` is repeated twice in the comment: # store the the intersection part
+
+## Problem Challenge 1 - importing with a wildcard (\*) from a library will cause a linting error since this could cause naming issues. I'd suggest importing the functions that are being used directly as from heapq import heappop, heappush
+
+## Problem Challenge 2 - By convention, class names (job) should start with a capital letter.Same comment as above in regards to the wildcard import statement.
+
 Problem Challenge 3 - Same comment as Problem Challenge 1 for the import `from __future`.Same comment as above in regards to the wildcard import statement.
 
--------------------------
+---
 
+7. Pattern: Cyclic SortProblem Challenge 3 - In this solution, there is an inconsistent declaration of i and n. It is done on one line in previous solutions. Also, the while loop can be instantiated on n since it has been declared as the length of the array: n = len(nums) i = 0 while i < len(nums):This would be more consistent with other solutions (see Problem Challenge 2) as:    i, n = 0, len(nums)    while i < n:
+
+---
