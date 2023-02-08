@@ -39,7 +39,7 @@ def main():
     head.print_list()
     result = reverse(head)
     print("Nodes of reversed LinkedList are: ", end='')
-    result.print_list()
+    result.print_list()  # type: ignore
 
 
 main()

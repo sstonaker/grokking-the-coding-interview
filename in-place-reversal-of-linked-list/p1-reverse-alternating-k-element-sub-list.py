@@ -73,7 +73,7 @@ def main():
     head.print_list()
     result = reverse_alternate_k_elements(head, 2)
     print("Nodes of reversed LinkedList are: ", end='')
-    result.print_list()
+    result.print_list()  # type: ignore
 
 
 main()

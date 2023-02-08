@@ -53,7 +53,7 @@ def main():
     head.print_list()
     result = rotate(head, 3)
     print("Nodes of rotated LinkedList are: ", end='')
-    result.print_list()
+    result.print_list()  # type: ignore
 
 
 main()
