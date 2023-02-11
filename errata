@@ -1,10 +1,10 @@
 Hi,
 Thank you for creating the course, I think it is well put together and contains the critical patterns to learn for coding interviews.
-I would like to point out the following errata so that it can be updated in the next version:
+I have some comments that I would like to share, along with some errata, for you to consider updating in the next version:
 
 ---
 
-In the Python solutions, there is a mixture of camelCase and snake_case. While I believe it may be allowed in the official documentation, Python convention is generally for snake_case with variables names.
+In the Python solutions, there is a mixture of camelCase and snake_case. While I believe it may be allowed in the official documentation, Python convention is generally for snake_case with variable names.
 Ex. Solution to Triplet Sum to Zero (medium) is an excellent example of typical Python Convention while Squaring a Sorted Array (easy) mixes the conventions between function and variable names.
 The following modules have non-typical conventions which I would be happy to submit solutions for if interested:2. Pattern: Two PointersSquaring a Sorted Array (easy)4. Pattern Islands (or Matrix Traversal) (_NEW_)
 All exercises6. Pattern: Merge IntervalsMerge Intervals (medium)Problem Challenge 1Problem Challenge 37. Pattern: Cyclic SortFind all Missing Numbers (easy)Find the Duplicate Number (easy) (solution2)Find all Duplicate Numbers (easy)Problem Challenge 39. Pattern: Tree Breadth First SearchBinary Tree Level Order Traversal (easy)Reverse Level Order Traversal (easy)
@@ -12,7 +12,8 @@ Zigzag Traversal (medium)Level Averages in a Binary Tree (easy)
 Minimum Depth of a Binary Tree (easy)
 Level Order Successor (medium)
 Connect Level Order Siblings (medium)Problem Challenge 1
-Problem Challenge 210. Pattern: Tree Depth First SearchAll paths for a Sum (medium)Sum of Path Numbers (medium)Path With Given Sequence (medium)Count Paths for a Sum (medium)Problem Challenge 1Problem Challenge 211. Pattern Two HeapsFind the Median of a Number Stream (medium)Sliding Window Median (hard)Maximum Capital (hard)Problem Challenge 1
+Problem Challenge 210. Pattern: Tree Depth First SearchAll paths for a Sum (medium)Sum of Path Numbers (medium)Path With Given Sequence (medium)Count Paths for a Sum (medium)Problem Challenge 1Problem Challenge 211. Pattern: Two HeapsFind the Median of a Number Stream (medium)Sliding Window Median (hard)Maximum Capital (hard)Problem Challenge 112. Pattern: SubsetsSubsets (easy)Subsets With Duplicates (easy)Permutations (medium)Balanced Parentheses (hard)Unique Generalized Abbreviations (hard)Problem Challenge 1Problem Challenge 2
+Problem Challenge 3
 
 Additionally, most of the above Python solutions do not have correct indentation. There are only 2 spaces when there should be 4 spaces for an indent. If you paste the solutions into an editor without an auto-formatter, you will need to fix all the indentation in order to run the solution.-------------------- 3. Pattern: Fast & Slow PointersStart of LinkedList Cycle (medium) - In this solution, the `from __future__ import print_function` line is not needed and may be confusing to some students. I assume this is an artifact of testing and most will not be running this code as its own module.
 
@@ -58,7 +59,7 @@ Problem Challenge 3 - Same comment as Problem Challenge 1 for the import `from
 
 ---
 
-7. Pattern: Cyclic SortProblem Challenge 3 - In this solution, there is an inconsistent declaration of i and n. It is done on one line in previous solutions. Also, the while loop can be instantiated on n since it has been declared as the length of the array: n = len(nums) i = 0 while i < len(nums):This would be more consistent with other solutions (see Problem Challenge 2) as:    i, n = 0, len(nums)    while i < n:
+7. Pattern: Cyclic SortProblem Challenge 3 - In this solution, there is an inconsistent declaration of i and n. It is done on one line in previous solutions. Also, the while loop can be instantiated on n since it has been declared as the length of the array:    n = len(nums)    i = 0    while i < len(nums):This would be more consistent with other solutions (see Problem Challenge 2) as:    i, n = 0, len(nums)    while i < n:
 
 ---
 
@@ -121,3 +122,24 @@ Line 9, the start value can be removed to be consistent with other solutions.
 ---
 
 Problem Challenge 1 - Same comment regarding import statement for heappop, heappush.
+
+---
+
+12. Pattern: SubsetsSubsets (easy) - This solution can be simplified by initializing the array with an empty array rather than initializing it empty and appending an empty array on the next line:    subsets = [[]]
+
+---
+
+## Subsets With Duplicates (easy) -  This solution can benefit from the same simplification mentioned above. It would also be more common to invoke the sort method on the array rather than the callable from list on line 3:    nums.sort()
+
+## String Permutations by changing case (medium) - Similar comment as above for the initialization of the permutations list:    permutations = [str]
+
+## Unique Generalized Abbreviations (hard) - In the Python solution on line 6, there is an extra whitespace before the count parameter. This won't break the program, but will cause warnings from the linter. def **init**(self, str, start, count):
+
+## Problem Challenge 1 - In the Python solution on line 7, the 0 start parameter can be eliminated to be consistent with other solutions.
+
+Problem Challenge 2 - As mentioned for previous solutions, the default parameters can be set for the TreeNode class:
+class TreeNode:    def **init**(self, val, left=None, right=None):        self.val = val        self.left = left        self.right = rightThe solution can then be further simplified by passing the left and right properties when creating a new object, rather than setting them explicitly:        for left_tree in left_subtrees:            for right_tree in right_subtrees:                root = TreeNode(i, left_tree, right_tree)                result.append(root)
+
+---
+
+Problem Challenge 3 - Same comment as above for the TreeNode class.
