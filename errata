@@ -12,7 +12,16 @@ Level Order Successor (medium)
 Connect Level Order Siblings (medium)Problem Challenge 1
 Problem Challenge 210. Pattern: Tree Depth First SearchAll paths for a Sum (medium)Sum of Path Numbers (medium)Path With Given Sequence (medium)Count Paths for a Sum (medium)Problem Challenge 1Problem Challenge 211. Pattern: Two HeapsFind the Median of a Number Stream (medium)Sliding Window Median (hard)Maximum Capital (hard)Problem Challenge 112. Pattern: SubsetsSubsets (easy)Subsets With Duplicates (easy)Permutations (medium)Balanced Parentheses (hard)Unique Generalized Abbreviations (hard)Problem Challenge 1Problem Challenge 2
 Problem Challenge 3
-13. Pattern: Modified Binary SearchOrder-agnostic Binary Search (easy)Number Range (medium)Search in a Sorted Infinite Array (medium)Problem Challenge 1
+13. Pattern: Modified Binary SearchOrder-agnostic Binary Search (easy)Number Range (medium)Search in a Sorted Infinite Array (medium)Problem Challenge 115. Pattern: Top 'K' ElementsTop 'K' Numbers (easy)Kth Smallest Number (easy)'K' Closest Points to the Origin (easy)
+Connect Ropes (easy)Top 'K' Frequent Numbers (medium)Frequency Sort (medium)Kth Largest Number in a Stream (medium)'K' Closest Numbers (medium)Maximum Distinct Elements (medium)Sum of Elements (medium)Rearrange String (hard)Problem Challenge 1Problem Challenge 2
+Problem Challenge 3
+
+
+
+
+
+
+
 
 
 
@@ -98,7 +107,7 @@ Problem Challenge 2  - Same comments as above. Also on line 20, the default st
 Binary Tree Path Sum (easy) - In the Python solution, the sum used as a parameter is a reserved keyword and this would be better named as total or just s. It doesn't affect this program, but might be considered bad practice.
 -----
 11. Pattern: Two Heaps
-Note: There are some more efficient ways to manage heaps in Python. See https://docs.python.org/3/library/heapq.html for details of using heappushpop and heapify.
+Note: There are some more efficient ways to manage heaps in Python. See https://docs.python.org/3/library/heapq.html for details of using heappushpop, heapreplace, and heapify.
 
 Find the Median of a Number Stream (medium) - importing with a wildcard (*) from a library will cause a linting error since this could cause naming issues. I'd suggest importing the functions that are being used directly as from heapq import heappop, heappush
 See above note for using heappushpop.-----
@@ -142,6 +151,40 @@ Complement of Base 10 Number (medium) - In the Python solution, there is no mai
 Problem Challenge 1 - I believe the name of this function is a typo and it was intended to be called flip_and_invert_image.def flip_an_invert_image(matrix):
 
 -------------------------
+15. Pattern: Top 'K' Numbers
+Note: There are some more efficient ways to manage heaps in Python. See https://docs.python.org/3/library/heapq.html for details of using heappushpop, heapreplace, and heapify. The algorithms in this section can benefit from heapreplace since it is more efficient than separate calls of heappop and heappush per the documentation.
+
+ Top 'K' Elements - Same comment as before with the wildcard import.from heapq import heappop, heappush
+-----
+Kth Smallest Number (easy) - Same comment as above.
+-----
+'K' Closest Points to the Origin (easy) - Same comment as above plus the print statement import as previously mentioned. Line 17 can be shorted slightly by:        return self.x ** 2 + self.y ** 2
+-----
+Connect Ropes (easy) - Same as prior comment for wildcard import statement.
+-----
+Top 'K' Frequent Numbers (medium) - There is a typo in the example one code block for appeared. Same as prior comment for wildcard import statement.  Explanation: Both '11' and '12' apeared twice.-----
+Frequency Sort (medium) - Same as prior comment for wildcard import statement. The parameter str is a keyword, which in this case, since dealing with strings, is advised to change to string or simple s.
+
+-----
+Kth Largest Number in a Stream (medium) - Same as prior comment for wildcard import statement. I would also suggest renaming the add function since it is a reserved keyword to add_to_heap.
+-----
+'K' Closest Numbers (medium) -  Same as prior comment for wildcard import statement. On line 27 there is an extra whitespace in from of the target parameter.def binary_search(arr, target):
+On line 30 floor division can be used to calculate the mid to be more consistent with other solutions:        mid = low + (high - low) // 2
+The above applies to the two-pointer solution as well.-----
+Maximum Distinct Elements (medium) - Same as prior comment for wildcard import statement.
+-----
+Sum of Elements (medium) - Same as prior comment for wildcard import statement.
+-----
+Rearrange String (hard)  - Same as prior comment for wildcard import statement. Same as prior comment for use of keyword str.
+-----
+Problem Challenge 1 - Same as prior comment for wildcard import statement.
+-----
+Problem Challenge 2 - Same as prior comment for wildcard import statement.
+-----
+Problem Challenge 3 - Same as prior comment for wildcard import statement.
+-------------------------
+
+
 
 
 
