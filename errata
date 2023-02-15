@@ -15,6 +15,7 @@ Problem Challenge 3
 13. Pattern: Modified Binary SearchOrder-agnostic Binary Search (easy)Number Range (medium)Search in a Sorted Infinite Array (medium)Problem Challenge 115. Pattern: Top 'K' ElementsTop 'K' Numbers (easy)Kth Smallest Number (easy)'K' Closest Points to the Origin (easy)
 Connect Ropes (easy)Top 'K' Frequent Numbers (medium)Frequency Sort (medium)Kth Largest Number in a Stream (medium)'K' Closest Numbers (medium)Maximum Distinct Elements (medium)Sum of Elements (medium)Rearrange String (hard)Problem Challenge 1Problem Challenge 2
 Problem Challenge 3
+16. Pattern K-way MergeMerge K Sorted Lists (medium)Kth Smallest Number in M Sorted Lists (medium)Smallest Number Range (hard)Problem Challenge 1
 
 
 
@@ -183,11 +184,12 @@ Problem Challenge 2 - Same as prior comment for wildcard import statement.
 -----
 Problem Challenge 3 - Same as prior comment for wildcard import statement.
 -------------------------
-
-
-
-
-
-
-
+16. Pattern: K-way Merge
+Merge K Sorted Lists (medium)  - The prior comments regarding importing the print_function and the wildcard import from heapq apply. The ListNode class can use a default parameter to be more consistent with other solutions.class ListNode:    def __init__(self, value, next=None):        self.value = value        self.next = next
+-----
+Kth Smallest Number in M Sorted Lists (Medium) - The difficulty in the title of this problem is capitalized which is inconsistent with all other solutions. The prior comment regarding the wildcard import from heapq applies. This solution uses the list reserved keyword as a variable name.
+-----
+Kth Smallest Number in a Sorted Matrix (Hard) - The difficulty in the title of this problem is capitalized which is inconsistent with all other solutions. The prior comment regarding the wildcard import from heapq applies.
+-----
+Smallest Number Range (Hard) - The difficulty in the title of this problem is capitalized which is inconsistent with all other solutions. The prior comments regarding importing the print_function and the wildcard import from heapq apply. On line 7, the start parameter for the range function can be omitted (it's even omitted on the line directly below). As mentioned for prior solutions, line 19 is a good candidate for heapreplace                else:                    heapreplace(min_heap, (nums1[i] + nums2[j], i, j))On line 23, num can be replaced with a placeholder variable since it is needed for unpacking, but unused    for _, i, j in min_heap:        result.append([nums1[i], nums2[j]])
 
